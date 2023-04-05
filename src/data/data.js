@@ -2,7 +2,13 @@
 import React from "react";
 import photosnap from "../images/photosnap.svg";
 import manage from "../images/manage.svg";
-import account from "../images/account.svg"
+import account from "../images/account.svg";
+import myHome from "../images/myhome.svg";
+import LoopsStudio from "../images/loop-studios.svg";
+import faceIt from "../images/faceit.svg";
+import shortly from "../images/shortly.svg";
+import insure from "../images/insure.svg";
+
 const data = [
   {
     id: 1,
@@ -52,7 +58,7 @@ const data = [
   {
     id: 4,
     company: "MyHome",
-    logo: "../images/myhome.svg",
+    logo: myHome,
     new: false,
     featured: false,
     position: "Junior Frontend Developer",
@@ -67,7 +73,7 @@ const data = [
   {
     id: 5,
     company: "Loop Studios",
-    logo: "../images/loop-studios.svg",
+    logo: LoopsStudio,
     new: false,
     featured: false,
     position: "Software Engineer",
@@ -82,7 +88,7 @@ const data = [
   {
     id: 6,
     company: "FaceIt",
-    logo: "../images/faceit.svg",
+    logo: faceIt,
     new: false,
     featured: false,
     position: "Junior Backend Developer",
@@ -97,7 +103,7 @@ const data = [
   {
     id: 7,
     company: "Shortly",
-    logo: "../images/shortly.svg",
+    logo: shortly,
     new: false,
     featured: false,
     position: "Junior Developer",
@@ -112,7 +118,7 @@ const data = [
   {
     id: 8,
     company: "Insure",
-    logo: "../images/insure.svg",
+    logo: insure,
     new: false,
     featured: false,
     position: "Junior Frontend Developer",

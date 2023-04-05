@@ -2,10 +2,10 @@
 
 import React from "react";
 
-const Jobs = ({ jobs }) => {
+const Jobs = ({ jobs, addToFilter }) => {
   return (
-    <div className="d-flex flex-column gap-5 mt-5 text-start">
-      {jobs.map((job) => {
+    <div className="d-flex flex-column gap-5 mt-5 pt-5 text-start">
+      {jobs.map((job, i) => {
         const {
           id,
           company,
@@ -20,9 +20,10 @@ const Jobs = ({ jobs }) => {
           tools,
           featured,
         } = job;
-        console.log(job);
+        // console.log(job);
+        // console.log(id);
         return (
-          <div className="job p-3 mx-auto bg-white rounded-2 py-5" key={id}>
+          <div className="job p-3 mx-auto bg-white rounded-2 py-5" key={i}>
             <img className="logo" src={logo} alt="" />
             <div className="d-flex align-items-center gap-4">
               <p className=" fw-bold text-dark-cyan">{company}</p>
@@ -46,15 +47,28 @@ const Jobs = ({ jobs }) => {
               <p className=" fw-semibold text-dark-grayish-cyan">{location}</p>
             </div>
             <div className="job-bottom d-flex align-items-center gap-2 flex-wrap pt-3  ">
-              <p className="text-dark-cyan fw-semibold px-2 py-1 pt-2 rounded-1">
+              <p
+                onClick={() => {
+                  addToFilter(role);
+                }}
+                className="text-dark-cyan fw-semibold px-2 py-1 pt-2 rounded-1"
+              >
                 {role}
               </p>
-              <p className="text-dark-cyan fw-semibold px-2 py-1 pt-2 rounded-1">
+              <p
+                onClick={() => {
+                  addToFilter(level);
+                }}
+                className="text-dark-cyan fw-semibold px-2 py-1 pt-2 rounded-1"
+              >
                 {level}
               </p>
               {languages.map((language) => {
                 return (
                   <p
+                    onClick={() => {
+                      addToFilter(language);
+                    }}
                     className="text-dark-cyan fw-semibold px-2 py-1 pt-2 rounded-1"
                     key={language}
                   >
@@ -65,6 +79,9 @@ const Jobs = ({ jobs }) => {
               {tools.map((tool) => {
                 return (
                   <p
+                    onClick={() => {
+                      addToFilter(tool);
+                    }}
                     className="text-dark-cyan fw-semibold px-2 py-1 pt-2 rounded-1"
                     key={tool}
                   >

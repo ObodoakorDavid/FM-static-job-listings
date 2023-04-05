@@ -9,7 +9,7 @@ import img from "./images/bg-header-mobile.svg";
 function App() {
   return (
     <div className="App">
-      <img className="header-img" src={img} alt="" />
+      <img className="header-img mb-5" src={img} alt="" />
       <Home />
     </div>
   );
