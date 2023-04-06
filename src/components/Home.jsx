@@ -11,28 +11,49 @@ const Home = () => {
 
   const removeFilterItem = (item) => {
     const updatedFilterBy = filterBy.filter((eachItem) => eachItem !== item);
-    console.log(updatedFilterBy);
     setFilterBy(updatedFilterBy);
 
     if (updatedFilterBy.length > 0) {
-      console.log("gg");
+      let tempJobs = [];
+      updatedFilterBy.forEach((eachCriteria, i) => {
+        if (i === 0) {
+          const firstFilter = data.filter(
+            (job) =>
+              job.role === eachCriteria ||
+              job.level === eachCriteria ||
+              job.languages.includes(eachCriteria) ||
+              job.tools.includes(eachCriteria)
+          );
+          tempJobs = firstFilter;
+          setJobs(tempJobs);
+        } else {
+          const secondFilter = tempJobs.filter(
+            (job) =>
+              job.role === eachCriteria ||
+              job.level === eachCriteria ||
+              job.languages.includes(eachCriteria) ||
+              job.tools.includes(eachCriteria)
+          );
+          tempJobs = secondFilter;
+          setJobs(tempJobs);
+        }
+      });
+    } else {
+      setJobs(data);
     }
   };
 
   useEffect(() => {
     if (filterBy.length > 0) {
-      filterBy.forEach((c) => {
-        const zz = data.filter((job) => {
-          console.log(c);
-          return (
-            job.role === c ||
-            job.level === c ||
-            job.languages.includes(c) ||
-            job.tools.includes(c)
-          );
-        });
-        console.log(zz);
-        setJobs(zz);
+      filterBy.forEach((eachFilterCriteria) => {
+        const filteredJobs = jobs.filter(
+          (job) =>
+            job.role === eachFilterCriteria ||
+            job.level === eachFilterCriteria ||
+            job.languages.includes(eachFilterCriteria) ||
+            job.tools.includes(eachFilterCriteria)
+        );
+        setJobs(filteredJobs);
       });
     } else {
       setJobs(data);
@@ -52,6 +73,7 @@ const Home = () => {
         <FilterCriteria
           filterBy={filterBy}
           removeFilterItem={removeFilterItem}
+          setFilterBy={setFilterBy}
         />
       )}
       <Jobs jobs={jobs} addToFilter={addToFilter} />

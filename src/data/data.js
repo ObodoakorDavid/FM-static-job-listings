@@ -8,6 +8,8 @@ import LoopsStudio from "../images/loop-studios.svg";
 import faceIt from "../images/faceit.svg";
 import shortly from "../images/shortly.svg";
 import insure from "../images/insure.svg";
+import eyecam from "../images/eyecam-co.svg";
+import airFilter from "../images/the-air-filter-company.svg"
 
 const data = [
   {
@@ -133,7 +135,7 @@ const data = [
   {
     id: 9,
     company: "Eyecam Co.",
-    logo: "../images/eyecam-co.svg",
+    logo: eyecam,
     new: false,
     featured: false,
     position: "Full Stack Engineer",
@@ -148,7 +150,7 @@ const data = [
   {
     id: 10,
     company: "The Air Filter Company",
-    logo: "../images/the-air-filter-company.svg",
+    logo: airFilter,
     new: false,
     featured: false,
     position: "Front-end Dev",
