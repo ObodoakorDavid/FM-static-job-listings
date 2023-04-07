@@ -1,5 +1,4 @@
 /** @format */
-import React from "react";
 import photosnap from "../images/photosnap.svg";
 import manage from "../images/manage.svg";
 import account from "../images/account.svg";

@@ -7,7 +7,6 @@ const Jobs = ({ jobs, addToFilter }) => {
     <div className="jobs d-flex flex-column gap-5 text-start">
       {jobs.map((job, i) => {
         const {
-          id,
           company,
           logo,
           position,
