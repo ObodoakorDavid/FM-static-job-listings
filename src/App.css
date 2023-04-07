@@ -13,7 +13,7 @@
   text-align: center;
   background-color: var(--light-grayish-cyan-background);
   font-family: "League Spartan", sans-serif;
-  height: 100vh;
+  min-height: 100%;
 }
 
 .bg-dark-cyan {
@@ -47,7 +47,7 @@ nav {
   position: relative;
   max-width: 600px;
   width: 90%;
-  box-shadow: 0px 2px 20px 1px hsl(180, 22%, 85%);
+  box-shadow: 0px 15px 21px 5px hsl(180, 38%, 85%);
 }
 
 .job.border-active {
@@ -76,16 +76,17 @@ nav {
 }
 .jobs {
   padding: 120px 0;
+  min-height: 100vh;
 }
 
 .filter-criteria {
   position: absolute;
   max-width: 600px;
-  top: -4%;
+  top: -50px;
   left: 0;
   right: 0;
   width: 90%;
-  box-shadow: 0px 10px 10px 1px hsl(180, 21%, 84%);
+  box-shadow: 0px 14px 29px 2px hsl(180, 38%, 85%);
 }
 
 .filter-criteria p:nth-of-type(1) {
@@ -126,7 +127,7 @@ nav {
 }
 
 .three {
-  border-bottom: 0px solid !important;
+  border-bottom: 2px solid rgb(233, 231, 231);
 }
 
 /* =====================================  */
@@ -143,7 +144,7 @@ nav {
     width: 50%;
   }
   .three {
-    border: none !important;
+    border: none;
   }
 
   .job {
@@ -155,5 +156,9 @@ nav {
 
   .job-bottom {
     width: 50%;
+  }
+
+  nav {
+    background-image: url(./images/bg-header-desktop.svg);
   }
 }

@@ -27,7 +27,7 @@ const Jobs = ({ jobs, addToFilter }) => {
             className={`job p-3 mx-auto bg-white rounded-2 py-5 d-lg-flex justify-content-md-between ${borderActive}`}
             key={i}
           >
-            <div className="left-side d-lg-flex gap-lg-5 ps-lg-5 align-items-lg-center py-3 py-lg-0">
+            <div className="left-side d-lg-flex gap-lg-4 ps-lg-5 align-items-lg-center py-3 py-lg-0">
               <img className="logo" src={logo} alt="" />
               <div>
                 <div className="d-flex align-items-center gap-4">
@@ -48,7 +48,7 @@ const Jobs = ({ jobs, addToFilter }) => {
                 <p className="position-p fw-bolder text-very-dark-cyan">
                   {position}
                 </p>
-                <div className="three d-flex gap-2 border-bottom border-2 pb-1">
+                <div className="three d-flex gap-2 pb-1">
                   <p className=" fw-semibold text-dark-grayish-cyan">
                     {postedAt}
                   </p>

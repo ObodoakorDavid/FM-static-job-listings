@@ -8,9 +8,7 @@ import Home from "./components/Home";
 function App() {
   return (
     <div className="App">
-     <nav>
-
-     </nav>
+      <nav className="mb-3"></nav>
       <Home />
     </div>
   );
